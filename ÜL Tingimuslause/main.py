@@ -117,4 +117,4 @@ def hundred(num_a: int) -> int:
     if num_a <= 100:
         return 100 - num_a
     else: 
-        return abs(math.remainder(100, num_a))
+        return num_a % 100  
