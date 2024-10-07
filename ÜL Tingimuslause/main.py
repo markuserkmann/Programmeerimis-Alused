@@ -1,5 +1,4 @@
 """Exercises for if statement."""
-import math
 
 
 def are_equal(num_a: int, num_b: int) -> str:
@@ -14,7 +13,6 @@ def are_equal(num_a: int, num_b: int) -> str:
 
     :return: "equal" if given numbers are equal and "not equal" if they aren't.
     """
-
     if num_a == num_b:
         return "equal"
     else:
@@ -32,7 +30,6 @@ def positive_or_negative(num_a: int) -> str:
     :param num_a: given integer
     :return "negative", "positive" or "zero" depending on the given integer.
     """
-
     if num_a > 0:
         return "positive"
     elif num_a == 0:
