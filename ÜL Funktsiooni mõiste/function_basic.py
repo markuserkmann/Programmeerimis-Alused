@@ -1,31 +1,35 @@
-"""Basic function exercises."""
 import math
 
 
-def print_hello():
+def print_hello() -> str:
     print("Hello")
-    # code here
 
 
 def get_hello() -> str:
     return "Hello"
 
 
-def ask_name_and_greet_user():
-    name = input("Please enter your name \n")
+def ask_name_and_greet_user() -> str:
+    """
+    Ask for user's name and greet them.
 
-    if name.lower() == "thanos":
-        print("Get out of here, Thnos! Nobody wants to play with you!")
+    If the name is 'Thanos', it sends a special message. Otherwise, greets the user.
+    """
+    ClientInput = input("Please enter your name: ")
+    FinalNAme = ClientInput.capitalize()
+
+    if FinalNAme == "Thanos":
+        print("Get out of here, Thanos! Nobody wants to play with you!")
     else:
-        print("Hi, ", name, ". Would you like to have a Hamburger?")
+        print(f"Hi, {FinalNAme}. Would you like to have a Hamburger?")
 
-def calculate_hypotenuse_length(a, c) -> float:
-    return math.hypot(a, c)
-    # code here
 
-def calculate_cathetus_length(a, c) -> float:
-    """Return cathetus value."""
-    # code here
+def calculate_hypotenuse_length(a: float, b: float) -> float:
+    return math.hypot(a, b)
+
+
+def calculate_cathetus_length(a: float, c: float) -> float:
+    return math.sqrt(c ** 2 - a ** 2)
 
 
 if __name__ == '__main__':
